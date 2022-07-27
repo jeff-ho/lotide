@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   const flame = String.fromCodePoint(0x1f525);
   const scream = String.fromCodePoint(0x1f631);
   if (actual === expected) {
@@ -12,7 +12,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const tail = function(array) {
+const tail = function (array) {
   let localArray = array.slice(1);
   return localArray;
 };
@@ -27,7 +27,6 @@ assertEqual(example[0], undefined); //should return true
 
 const ex2 = tail([]);
 assertEqual(ex2[0], undefined); // should return true
-
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); // no need to capture the return value since we are not checking it

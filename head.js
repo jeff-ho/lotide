@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   const flame = String.fromCodePoint(0x1f525);
   const scream = String.fromCodePoint(0x1f631);
   if (actual === expected) {
@@ -12,7 +12,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const head = function(array) {
+const head = function (array) {
   return array[0];
 };
 
