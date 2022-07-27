@@ -17,6 +17,7 @@ const tail = function (array) {
   return localArray;
 };
 
+
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result.length, 2); // ensure we get back two elements
 assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
