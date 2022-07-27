@@ -10,7 +10,7 @@ const assertArraysEqual = function (actual, expected) {
     }
   }
   if (value === true) {
-    console.log(
+    console.log( 
       flame + flame + flame + `Assertion Passed: ${actual} === ${expected}`
     );
   } else {
@@ -19,6 +19,7 @@ const assertArraysEqual = function (actual, expected) {
     );
   }
 };
+
 
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
 assertArraysEqual([1, 2, 3], [3, 2, 1]);
