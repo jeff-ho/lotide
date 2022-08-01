@@ -1,18 +1,3 @@
-const assertEqual = function (actual, expected) {
-  const flame = String.fromCodePoint(0x1f525);
-  const scream = String.fromCodePoint(0x1f631);
-  if (actual === expected) {
-    console.log(
-      flame + flame + flame + `Assertion Passed: ${actual} === ${expected}`
-    );
-  } else {
-    console.log(
-      scream + scream + scream + `Assertion Failed: ${actual} !== ${expected}`
-    );
-  }
-};
-
-
 const eqArrays = function(arr1, arr2) {
   let status;
   if (arr1.length !== arr2.length) {
@@ -28,7 +13,6 @@ const eqArrays = function(arr1, arr2) {
   return status;
 };
 
-//our actual eqObjects function
 const eqObjects = function(object1, object2) {
   let arr1Length = Object.keys(object1).length
   let arr1Keys = Object.keys(object1)
@@ -52,19 +36,20 @@ const eqObjects = function(object1, object2) {
   return status;
 };
 
+module.exports = {eqObjects} ;
 
 
 
-const ab = { a: "1", b: "2"};
-const ba = { b: "2", a: "1"};
-console.log(eqObjects(ab, ba)); // => true
+// const ab = { a: "1", b: "2"};
+// const ba = { b: "2", a: "1"};
+// console.log(eqObjects(ab, ba)); // => true
 
-const abc = { a: "1", b: "2", c: "3" };
-console.log(eqObjects(ab, abc)); // => false
+// const abc = { a: "1", b: "2", c: "3" };
+// console.log(eqObjects(ab, abc)); // => false
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-console.log(eqObjects(cd, dc)); // => true
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// console.log(eqObjects(cd, dc)); // => true
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-console.log(eqObjects(cd, cd2)); // => false
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// console.log(eqObjects(cd, cd2)); // => false

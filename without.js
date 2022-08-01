@@ -20,14 +20,6 @@ const assertArraysEqual = function (actual, expected) {
   }
 };
 
-// given two arrays as parameters
-//I want to remove contents of array 2 from array 1
-// output should be an array without the unwanted elements
-//do not mutate the original strings. So no split, join, slice, splice
-
-//loop through each value of arr1 and see if it is included within arr2.
-//if the value of arr1 is not included within arr2, add it to an empty array
-// output would return the resulting array
 
 const without = function (arr1, arr2) {
   let array = [];
@@ -40,7 +32,9 @@ const without = function (arr1, arr2) {
 };
 
 
-console.log(without([1, 2, 3], [1])); // => [2, 3]
+module.exports = without;
+
+// console.log(without([1, 2, 3], [1])); // => [2, 3]
 // console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
 
 // const words = ["hello", "world", "lighthouse"];

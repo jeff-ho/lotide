@@ -49,6 +49,8 @@ const letterPositions = function (sentence) {
   return results;
 };
 
+module.exports = letterPositions;
 
-console.log(letterPositions("lighthouse in the house"))
-console.log(assertArraysEqual(letterPositions("hello")['e'],[1]))
+
+// console.log(letterPositions("lighthouse in the house"))
+// console.log(assertArraysEqual(letterPositions("hello")['e'],[1]))

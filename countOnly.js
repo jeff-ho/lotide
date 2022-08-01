@@ -1,17 +1,3 @@
-const assertEqual = function (actual, expected) {
-  const flame = String.fromCodePoint(0x1f525);
-  const scream = String.fromCodePoint(0x1f631);
-  if (actual === expected) {
-    console.log(
-      flame + flame + flame + `Assertion Passed: ${actual} === ${expected}`
-    );
-  } else {
-    console.log(
-      scream + scream + scream + `Assertion Failed: ${actual} !== ${expected}`
-    );
-  }
-};
-
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
@@ -46,7 +32,6 @@ const result1 = countOnly(firstNames, {
   Agouhanna: false,
 });
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+module.exports = countOnly;
+
+

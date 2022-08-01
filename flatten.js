@@ -36,16 +36,6 @@ const eqArrays = function(arr1, arr2) {
 };
 
 
-// take an array containing elements or arrays
-//flatten out the array by getting ride of nested arrays
-// output an array containing all the values
-
-//loop through each value of the original array.
-// if statement using Array.isArray() to see if the value is an array
-// if not then push value into an empty array
-// if so then loop through that array and push the values into the empty array
-// return the finished array
-
 const flatten = function(array) {
   let localArray = [];
   for (let i = 0 ; i < array.length ; i++) {
@@ -60,7 +50,9 @@ const flatten = function(array) {
   return localArray;
 }
 
-console.log(flatten([1, 2, [3, 4], 5, [6]]))
-console.log(flatten([[1,2,3], [4,5,6], [7,8,9]]))
-console.log(assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]),[ 1, 2, 3, 4, 5, 6 ]))
-console.log(eqArrays(flatten([1, 2, [3, 4], 5, [6]]),[ 1, 2, 3, 4, 5, 6 ]))
+module.exports = flatten;
+
+// console.log(flatten([1, 2, [3, 4], 5, [6]]))
+// console.log(flatten([[1,2,3], [4,5,6], [7,8,9]]))
+// console.log(assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]),[ 1, 2, 3, 4, 5, 6 ]))
+// console.log(eqArrays(flatten([1, 2, [3, 4], 5, [6]]),[ 1, 2, 3, 4, 5, 6 ]))
