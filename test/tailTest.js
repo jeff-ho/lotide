@@ -1,16 +1,26 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 
-const example = tail(["Hello"]);
-assertEqual(example[0], undefined); //should return true
+describe ('#tail', () => {
+  it ('Should return everything past the 0 index element', () => {
+    const result = tail(["Hello", "Lighthouse", "Labs"]);
+   assert.deepEqual(result, ["Lighthouse", "Labs"] )
+  });
 
-const ex2 = tail([]);
-assertEqual(ex2[0], undefined); // should return true
+  it ('Should return empty array for an array of 1 element', () => {
+    const result = tail(["Hello"]);
+   assert.deepEqual(result, [])
+  });
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
+  it ('Should return empty array for an empty array', () => {
+    const result = tail([]);
+   assert.deepEqual(result, [])
+  });
+})
+
+
+
+
+
+
