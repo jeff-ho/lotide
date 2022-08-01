@@ -10,7 +10,7 @@ const assertArraysEqual = function (actual, expected) {
     }
   }
   if (value === true) {
-    console.log( 
+    console.log(
       flame + flame + flame + `Assertion Passed: ${actual} === ${expected}`
     );
   } else {
@@ -18,9 +18,9 @@ const assertArraysEqual = function (actual, expected) {
       scream + scream + scream + `Assertion Failed: ${actual} !== ${expected}`
     );
   }
-}
+};
 
-const eqArrays = function(arr1, arr2) {
+const eqArrays = function (arr1, arr2) {
   let status;
   if (arr1.length !== arr2.length) {
     return false;
@@ -35,23 +35,13 @@ const eqArrays = function(arr1, arr2) {
   return status;
 };
 
-
-
-// Start of our own map function
 const words = ["ground", "control", "to", "major", "tom"];
 
-const map = function(array, callback) {
+const map = function (array, callback) {
   const results = [];
   for (let item of array) {
     results.push(callback(item));
   }
   return results;
-  
-}
+};
 module.exports = map;
-
-// const results1 = map(words, word => word[0]);
-// console.log(results1);
-
-// console.log(assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]))
-
